@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GetMyParking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2J-G2-ryN">
+                                <rect key="frame" x="32" y="595" width="311" height="40"/>
+                                <color key="backgroundColor" red="0.41892886161804199" green="0.7578657865524292" blue="0.76804512739181519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="G1e-H1-PX8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="Upload Photo"/>
+                                <connections>
+                                    <action selector="launchGalleryToUpload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K6k-3Q-cbg"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dil-Au-QuZ">
+                                <rect key="frame" x="32.5" y="52" width="311" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXv-tw-X7O">
+                                        <rect key="frame" x="0.0" y="0.0" width="73" height="31"/>
+                                        <color key="backgroundColor" red="0.41892886161804199" green="0.7578657865524292" blue="0.76804512739181519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <state key="normal" title="  30 X 40  "/>
+                                        <connections>
+                                            <action selector="downloadSmallestImageSize:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p2B-gI-1cq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzn-5v-qnc">
+                                        <rect key="frame" x="93" y="0.0" width="90" height="31"/>
+                                        <color key="backgroundColor" red="0.41892886161804199" green="0.7578657865524292" blue="0.76804512739181519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <state key="normal" title="  300 X 400  "/>
+                                        <connections>
+                                            <action selector="downloadMidSizeImages:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fda-BI-r4f"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KjL-QU-SQA">
+                                        <rect key="frame" x="203" y="0.0" width="108" height="31"/>
+                                        <color key="backgroundColor" red="0.41892886161804199" green="0.7578657865524292" blue="0.76804512739181519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <state key="normal" title="  1000 X 1200  "/>
+                                        <connections>
+                                            <action selector="downloadLargeSizedImages:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sfJ-Mf-qSZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AsK-KU-vtd">
+                                <rect key="frame" x="16" y="99" width="343" height="446"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yiu-S1-cMf">
+                                <rect key="frame" x="32" y="563" width="311" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uw9-Ie-NCW">
+                                        <rect key="frame" x="136" y="5.5" width="39.5" height="19"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Kge-YS-9Aw"/>
+                                    <constraint firstItem="Uw9-Ie-NCW" firstAttribute="centerY" secondItem="yiu-S1-cMf" secondAttribute="centerY" id="blG-0b-pKs"/>
+                                    <constraint firstItem="Uw9-Ie-NCW" firstAttribute="centerX" secondItem="yiu-S1-cMf" secondAttribute="centerX" id="hos-3h-afC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="S2J-G2-ryN" firstAttribute="top" secondItem="AsK-KU-vtd" secondAttribute="bottom" constant="50" id="6PA-sG-Owl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="S2J-G2-ryN" secondAttribute="bottom" constant="32" id="HVd-Sd-39A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AsK-KU-vtd" secondAttribute="trailing" constant="16" id="HXU-lN-ef4"/>
+                            <constraint firstItem="yiu-S1-cMf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IDb-Ij-cal"/>
+                            <constraint firstItem="dil-Au-QuZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="Pda-6R-Y8Z"/>
+                            <constraint firstItem="AsK-KU-vtd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="VUM-PE-qv4"/>
+                            <constraint firstItem="yiu-S1-cMf" firstAttribute="width" secondItem="S2J-G2-ryN" secondAttribute="width" id="VvC-gr-XC7"/>
+                            <constraint firstItem="AsK-KU-vtd" firstAttribute="top" secondItem="dil-Au-QuZ" secondAttribute="bottom" constant="16" id="hcD-6q-XEq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S2J-G2-ryN" secondAttribute="trailing" constant="32" id="hpV-nX-8LM"/>
+                            <constraint firstItem="S2J-G2-ryN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="lFO-Ey-mPx"/>
+                            <constraint firstItem="S2J-G2-ryN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mj0-xl-21g"/>
+                            <constraint firstItem="AsK-KU-vtd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sTI-tY-edk"/>
+                            <constraint firstItem="dil-Au-QuZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="umq-gZ-w2t"/>
+                            <constraint firstItem="S2J-G2-ryN" firstAttribute="top" secondItem="yiu-S1-cMf" secondAttribute="bottom" constant="2" id="ykG-bf-hW2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="AsK-KU-vtd" id="65u-r6-PwS"/>
+                        <outlet property="toastLabel" destination="Uw9-Ie-NCW" id="CI1-To-O0g"/>
+                        <outlet property="toastView" destination="yiu-S1-cMf" id="SVR-YA-yj1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="130.88455772113943"/>
+        </scene>
+    </scenes>
+</document>
